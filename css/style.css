@@ -1,0 +1,72 @@
+/* h1{
+    background-color: yellow !important;
+} */
+
+body {
+    font-family: "Poppins", "sans-serif";
+    background-color: #dddbd1;
+}
+
+#text{
+    min-height: 100px;
+    height: auto;
+    width: 500px;
+    background-color: gray;
+}
+
+.fonts h3{
+   text-align: center;
+   text-decoration: underline;
+   /* text-transform: capitalize; */
+   text-transform: uppercase;
+   /* letter-spacing: 10px; */
+   /* word-spacing: 20px; */
+}
+
+.fonts p{
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    word-spacing: 3px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+.colors h2{
+    color: aquamarine;
+}
+
+.colors p{
+    color: rgb(0, 0, 206);
+}
+
+.colors p.para3{
+    color: #00ff00;
+}
+
+
+.borders{
+    border: 1px solid red;
+    border-bottom: 5px solid red;
+    min-height: 100px;
+    background-color: aqua;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+   background-image: url("https://img.freepik.com/free-vector/blue-copy-space-digital-background_23-2148821698.jpg?t=st=1729133400~exp=1729137000~hmac=489cb6228032e0abd3e31e97c7e775ab835a51ad319c70963332f6c7e3f2a3bc&w=996");
+    width: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    color: white;
+}
+
+
+/* exercises-1 */
+
