@@ -1,0 +1,181 @@
+* {
+    font-family: "Poppins", "sans-serif";
+}
+
+body {
+    background: #222222;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 350px;
+    height: 600px;
+    background: #fff;
+    margin: auto;
+    background: url("../assets/whatsapp/chat-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background: #09534B;
+    padding: 5px 12px;
+}
+
+.container .topbar .user-info-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .topbar .user-info-left .user-image {
+    width: 40px;
+    height: 40px;
+}
+
+.container .topbar .user-info-left .user-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container .topbar .user-info-left .user-date h6 {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 300;
+
+}
+
+.container .topbar .user-info-left .user-date p {
+    margin: 0px;
+    font-size: 10px;
+}
+
+.container .topbar .user-info-right {
+    display: flex;
+    gap: 10px;
+}
+
+.container .topbar .user-info-right i {
+    font-size: 12px;
+}
+
+
+.container .chatBox ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    height: 480px;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+
+}
+
+.container .chatBox ul li {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container .chatBox ul li .message {
+    width: 70%;
+    float: left;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.container .chatBox ul li .message p {
+    margin: 0px;
+    font-weight: 500;
+    left: -10px;
+    width: 90%;
+}
+
+.container .chatBox ul li .message p::after {
+    content: " ";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-width: 6px;
+    margin-right: -1px;
+
+}
+
+
+.container .chatBox ul li .message span {
+    margin: 0px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.container .chatBox li.even .message{
+    float: right;
+    margin-right: 10px;
+    background-color: #DEFFC0;
+}
+
+.container .chatBox li.even .message p::after{
+    right: -10px !important;
+    border-left-color: #DEFFC0;
+    border-top-color: #DEFFC0;
+    left: auto !important;
+    border-right-color: transparent;
+}
+
+.container .footer{
+    padding: 10px 0px;
+}
+
+.container .footer .textbox{
+    text-align: center;
+    position: relative;
+}
+
+.container .footer .textbox input{
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+   padding:  0px 5px;
+}
+
+input[type="text"]::placeholder {
+    color: rgb(217, 44, 44);
+    padding-left: 30px;
+  }
+
+.container .footer .textbox .face-icon{
+    position: absolute;
+    top: 11px;
+    left: 20px;
+    font-size: 22px;
+    color: #666;
+}
+
+.container .footer .textbox .camaera-icon{
+    position: absolute;
+    top: 11px;
+    right: 24px;
+    font-size: 22px;
+    color: #666;
+}

@@ -1,0 +1,101 @@
+* {
+    font-family: "Poppins", "sans-serif";
+}
+
+
+body {
+    background: rgb(53, 52, 52);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 340px;
+    height: 550px;
+    background-color: white;
+    padding: 10px 15px;
+    overflow-y: scroll;
+    margin: auto;
+}
+
+.container h4 {
+    text-transform: uppercase;
+    color: rgb(163, 160, 160);
+    font-size: 12px;
+
+}
+
+
+.container .contact-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.container .contact-items:hover {
+  background: rgb(241, 237, 237);
+ 
+}
+
+
+.container .contact-items .left-element {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 75%;
+}
+
+.container .contact-items .left-element .user-image {
+    width: 50px;
+    height: 50px;
+}
+
+.container .contact-items .left-element .user-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.container .contact-items .left-element .user-date h5 {
+    margin: 0px;
+    color: rgb(39, 36, 36);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.container .contact-items .left-element .user-date p {
+    margin: 0px;
+    margin-top: 5px;
+    color: rgb(146, 139, 139);
+    font-weight: 500;
+}
+
+.container .contact-items .right-element {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+.container .contact-items .right-element p {
+    color: rgb(146, 139, 139);
+    margin: 0px;
+}
+
+.container .contact-items .right-element span {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(224, 150, 150);
+    padding: 1px 3px;
+    color: rgb(180, 32, 32);
+    font-size: 12px;
+    border-radius: 2px;
+    margin: 0px;
+    font-weight: bold;
+}
