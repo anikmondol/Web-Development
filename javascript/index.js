@@ -245,8 +245,8 @@ for(let i = 1; i < 11; i++){
     console.log(i);
 }
 
-*/ 
 
+// while loops
 
 let i = 1;
 
@@ -254,5 +254,131 @@ while (i < 11) {
     console.log(i);
     i++;
 }
+
+
+// for in loops
+
+let person = {
+    name: "anik mondal",
+    age: 24,
+    city: "Dhaka",
+}
+
+for (const key in person) {
+    //    console.log(person[key]);
+    if (key === "name") {
+        console.log(person[key]);
+    }
+}
+
+
+// for of loops
+
+const numbers = [11, 25, 44, 28];
+
+for (const element of numbers) {
+    console.log(element);
+    
+}
+
+*/
+
+
+
+// ----- Exercise 2 -----
+
+/*
+
+# sum of even and odd from an array
+
+const numbers = [11, 25, 44, 28];
+let evenSum = 0;
+let oddSum = 0;
+let sum = 0
+
+for (const element of numbers) {
+
+    sum += element;
+
+    if (element % 2 == 0) {
+        evenSum += element;
+    }else{
+        oddSum += element;
+    }
+    
+}
+
+console.log("total number of sum ", sum);
+console.log("sum of the even ", evenSum);
+console.log("sum of the odd ", oddSum);
+
+
+# Find the 2nd maximum value from an array
+
+
+const numbers = [11, 25, 44, 28];
+
+let max = -Infinity;
+let secondMax = -Infinity;
+
+for (const num of numbers) {
+  if (num > max) {
+    secondMax = max;  
+    max = num;    
+  } else if (num > secondMax && num < max) {
+    secondMax = num;  
+  }
+}
+
+console.log(secondMax);
+
+
+*/ 
+
+
+
+// ----- Functions -------
+
+/*
+
+function name(){
+    // code of statement
+}
+
+
+function sum(a, b){
+     
+    return a + b;
+    
+}
+
+console.log(sum(10, 20));
+
+*/ 
+
+
+// DOM - Date Objects Modal
+
+
+// document.write("<h1>hello world</h1>");
+
+
+// let heading = document.getElementById("heading").innerText = "JavaScript Code";
+
+let message = document.getElementsByClassName("message");
+// console.log(message);
+
+// for (const element of message) {
+//     element.innerText = "I am leaning javascript";
+
+// }
+
+let p = document.getElementsByTagName('p');
+// console.log(p);
+
+for (const element of p) {
+    element.innerText = "ab";
+}
+
 
 
