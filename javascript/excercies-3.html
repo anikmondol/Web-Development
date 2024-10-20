@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercise-3 </title>
+    <link rel="stylesheet" href="excercies-3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="clock"></div>
+        <input type="datetime-local" name="alarmType" onchange="SetAlarmTime(this.value)">
+        <div class="controls">
+            <button class="button set-alarm" onclick="setAlarm()">Set Alarm</button>
+            <button class="button clear-alarm" onclick="clearAlarm()">Clear Alarm</button>
+        </div>
+
+    </div>
+
+    <script src="./excercies-3.js"></script>
+</body>
+
+</html>
