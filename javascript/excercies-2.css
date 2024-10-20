@@ -1,0 +1,64 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #026a9b, #259ed7, #029fe9);
+    display: flex;
+    height: 95vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 400px;
+    box-shadow: 0px 0px 7px 5px #ffffff;
+    transition: 1s ease-in-out;
+    border-radius: 4px;
+}
+
+.container:hover{
+    box-shadow: 0px 0px 7px 5px #bfbfc2;
+    transition: 0.5s ease-in-out;
+}
+
+.container .display{
+    text-align: right;
+    height: 70px;
+    line-height: 60px;
+    padding: 16px 8px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.buttons {
+    color: #fff;
+    display: grid;
+    border-bottom: 1px solid #c5bdbd;
+    border-left: 1px solid#c5bdbd;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .buttons > div {
+    border-top: 1px solid #c5bdbd;
+    border-right: 1px solid#c5bdbd;
+  }
+
+  .button {
+    /* border: 0.5px solid #fff; */
+    line-height: 100px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  #equal {
+    background-color: rgb(8, 8, 44);
+    color: white;
+  }
+
+  .button:hover {
+    background-color: #323330;
+    color: white;
+    transition: 0.5s ease-in-out;
+  }
