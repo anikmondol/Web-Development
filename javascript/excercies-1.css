@@ -1,0 +1,80 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #026a9b, #259ed7, #029fe9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+#form {
+    width: 320px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#form h1 {
+    text-align: center;
+    color: #0f2027;
+    font-size: 24px;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #222;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#form button:hover {
+    background-color: #504b4b;
+    transition-duration: 0.5s;
+}
+
+#form .inputControl {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+}
+
+#form .inputControl input {
+    border: 2px solid #cdc8c8;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    max-width: 100%;
+}
+
+#form .inputControl input:hover {
+    border: 2px solid #473592;
+    transition-duration: 0.5s;
+}
+
+#form .inputControl input:focus {
+    outline: 0;
+}
+
+#form .inputControl.success input {
+    border-color: #09c372;
+}
+
+#form .inputControl.error input {
+    border-color: #ff3860;
+}
+
+#form .inputControl .error {
+    color: #ff3860;
+    font-size: 11px;
+    height: 13px;
+    margin-top: 2px;
+}

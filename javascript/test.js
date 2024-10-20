@@ -359,13 +359,14 @@ console.log(sum(10, 20));
 
 // DOM - Date Objects Modal
 
+/*
 
 // document.write("<h1>hello world</h1>");
 
 
 // let heading = document.getElementById("heading").innerText = "JavaScript Code";
 
-let message = document.getElementsByClassName("message");
+// let message = document.getElementsByClassName("message");
 // console.log(message);
 
 // for (const element of message) {
@@ -373,12 +374,17 @@ let message = document.getElementsByClassName("message");
 
 // }
 
-let p = document.getElementsByTagName('p');
+// let p = document.getElementsByTagName('p');
 // console.log(p);
 
-for (const element of p) {
-    element.innerText = "ab";
-}
+// for (const element of p) {
+//     element.innerText = "ab";
+// }
+
+
+*/ 
+
+
 
 
 
