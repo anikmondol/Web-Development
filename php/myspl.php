@@ -1,37 +1,66 @@
 <?php
-/*
-## database connection
-mysqli extension - works only mysql database
-pdo (php date object) - works with 12 different database
-*/ 
 
-$server_name = "localhost";
-$user_name = "root";
-$password = "";
-$dbname = "phptutorial";
+include("config/database.php");
 
-// create connection
-/* $conn = new mysqli($server_name, $user_name, $password, $dbname);
+## insert query 
 
-// check connection
-if ($conn->connect_error) {
-    echo "Connection failed ". $connect_error;
-}else{
-    echo "done";
-}
 
-*/
- 
-$conn = @mysqli_connect($server_name, $user_name, $password, $dbname);
+// $date = date("Y-m-d H:i:s");
 
-// echo "<pre>";
-//  print_r($conn);
+// $sql = "INSERT INTO `users`(`username`, `password`, `created_at`) VALUES ('anik mondal','321','$date')";
 
- if ($conn) {
-    echo("done"); 
- }else{
-    echo "Failed to connect to database, error: ". mysqli_connect_error();
- }
+// $result = $conn->query($sql);
+
+// if ($result === true) {
+//     echo "new record created";
+// } else {
+//     echo "no record, error : ". $conn->error;
+// }
+
+
+## select query
+
+// $sql = "SELECT * FROM `users` where id = 2";
+
+
+// $result = $conn->query($sql);
+
+// if ($result->num_rows > 0) {
+//     while ($row = $result->fetch_assoc()) {
+//         echo "<pre>";
+//         print_r($row);
+//     }
+// } else {
+//     echo "error";
+// }
+
+
+// update query
+
+// $sql = "UPDATE `users` SET `username`='joy roy', `password`='741' WHERE id= 5";
+
+
+// $result = $conn->query($sql);
+
+// if ($result) {
+//     echo "update successfully";
+// } else {
+//     echo "error";
+// }
+
+
+// delete query
+
+// $spl = "DELETE FROM `users` WHERE id = 7";
+
+// $result = $conn->query($spl);
+
+// if($result){
+//     echo "record delete";
+// }else{
+//     echo "error";
+// }
+
 
 
 
