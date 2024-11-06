@@ -14,17 +14,37 @@ if (isset($_REQUEST["submit"])) {
     // insert data in the table
 
     $task = $_REQUEST["task"];
+    $id = $_POST["id"];
     $created_at = $update_at = date("Y-m-d H:i:s");
 
-    $spl = "INSERT INTO `todo_lists`(`task`, `created_at`, `update_at`) VALUES ('$task','$created_at','$update_at')";
 
-    $res = $obj->insetTask($spl);
+    // update
+    if (!empty($id)) {
+        $sql = "UPDATE `todo_lists` SET `task`='$task',`created_at`='$created_at',`update_at`='$update_at' WHERE id = $id";
 
-    if ($res) {
-        $_SESSION['success'] = "Task has been created successfully";
-    } else {
-        $_SESSION['error'] = "Something went wrong, please try again later";
+        $res = $obj->executeQuery($sql);
+
+        if ($res) {
+            $_SESSION['success'] = "Task has been update successfully";
+        } else {
+            $_SESSION['error'] = "Something went wrong, please try again later";
+        }
     }
+    // insert
+    else {
+        $spl = "INSERT INTO `todo_lists`(`task`, `created_at`, `update_at`) VALUES ('$task','$created_at','$update_at')";
+
+        $res = $obj->executeQuery($spl);
+
+        if ($res) {
+            $_SESSION['success'] = "Task has been created successfully";
+        } else {
+            $_SESSION['error'] = "Something went wrong, please try again later";
+        }
+    }
+
+
+
 
     session_write_close();
     header("LOCATION:index.php");
@@ -34,9 +54,31 @@ if (isset($_REQUEST["submit"])) {
 // get all tasks
 $tasks =  $obj->getAllTasks();
 
+// get task
 
+$editing = false;
+if (isset($_GET["action"]) && $_GET["action"] === "edit") {
+    $taskDate = $obj->getTask($_GET["id"]);
+    $editing = true;
+}
 
+// delete task
 
+if (isset($_GET['action']) && $_GET["action"] === "delete") {
+    $sql = "DELETE FROM `todo_lists` WHERE id = ". $_GET['id'];
+
+    $res = $obj->executeQuery($sql);
+
+    if ($res) {
+        $_SESSION['success'] = "Task has been created successfully";
+    } else {
+        $_SESSION['error'] = "Something went wrong, please try again later";
+    }
+
+    session_write_close();
+    header("LOCATION:index.php");
+
+}
 
 
 
@@ -154,7 +196,7 @@ $tasks =  $obj->getAllTasks();
             font-weight: 400;
         }
 
-        .task button {
+        .task .button {
             background-color: #db2525;
             color: #ffffff;
             border: none;
@@ -165,9 +207,10 @@ $tasks =  $obj->getAllTasks();
             border-radius: 5px;
             float: right;
             margin-right: 5px;
+            text-align: center;
         }
 
-        .task button.edit {
+        .task .button.edit {
             background-color: #3d9afb;
         }
 
@@ -223,8 +266,17 @@ $tasks =  $obj->getAllTasks();
 
             <h3>Todo List Project</h3>
             <form action="index.php" method="post" id="taskform">
-                <input type="text" name="task" id="task" placeholder="Task to be done..." />
-                <button type="submit" name="submit" id="add">Add</button>
+                <input type="hidden" name="id" value="<?php if ($editing) {
+                                                            echo $taskDate["id"];
+                                                        } ?>">
+                <input type="text" name="task" id="anik" placeholder="Task to be done..." value="<?php if ($editing) {
+                                                                                                    echo $taskDate["task"];
+                                                                                                } ?>" />
+                <button type="submit" name="submit" id="add"><?php if ($editing) {
+                                                                    echo "Update";
+                                                                } else {
+                                                                    echo "Add";
+                                                                } ?></button>
             </form>
         </div>
 
@@ -233,19 +285,17 @@ $tasks =  $obj->getAllTasks();
 
             if (!empty($tasks)) {
                 foreach ($tasks as $key => $value) {
-                    # code...
-                
-            
 
             ?>
 
-            <div class="task">
-                <span><?= $value["task"] ?></span>
-                <button class="edit"><i class="fa fa-edit"></i></button>
-                <button class="delete"><i class="fa fa-trash-alt"></i></button>
-            </div>
+                    <div class="task">
+                        <span><?= $value["task"] ?></span>
+                        <a href="index.php?action=edit&id=<?= $value['id'] ?>" class="edit button"><i class="fa fa-edit"></i></a>
+                        <a href="index.php?action=delete&id=<?= $value['id'] ?>" class="delete button"><i class="fa fa-trash-alt"></i></a>
+                    </div>
 
-            <?php }};?>
+            <?php }
+            }; ?>
 
         </div>
     </div>

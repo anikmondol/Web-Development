@@ -6,7 +6,7 @@ class Task extends Database
 
     // function to insert date
 
-    public function insetTask($sql)
+    public function executeQuery($sql)
     {
         $result = $this->connect()->query($sql);
 
@@ -32,9 +32,27 @@ class Task extends Database
          }
 
          return $date;
-         
 
     }
+
+       // function to get all tasks
+
+       public function getTask($id){
+        $sql = "SELECT * FROM `todo_lists` where id = $id";
+        $result = $this->connect()->query($sql);
+
+        $date = array();
+
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+           $date = $row;
+          }
+        }
+
+        return $date;
+        
+
+   }
 
     
 }
