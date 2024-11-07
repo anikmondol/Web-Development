@@ -1,7 +1,7 @@
 <?php
 
 include("config/database.php");
-
+include("middleware.php");
 
 // form submit working
 
@@ -60,6 +60,7 @@ if (isset($_REQUEST["submit"])) {
         </form>
         <div class="container" style="background-color:#f1f1f1">
             <a href="users.php" class="footerbtn">All Users</a>
+            <a href="logout.php" class="footerbtn">Logout</a>
         </div>
     </section>
 

@@ -56,10 +56,6 @@ if (isset($_REQUEST["submit"])) {
                 <button type="submit" name="submit">Log in</button>
             </div>
         </form>
-
-        <div class="container" style="background-color:#f1f1f1">
-            <a href="add-users.php" class="footerbtn">Sing up</a>
-        </div>
     </section>
 
 </body>
